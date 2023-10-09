@@ -16,8 +16,7 @@ app.use(bodyParser.json());
 app.use(cors({origin: true, credentials: true}));
 
 // Gunakan rute pengguna
-app.use('/new', userRoutes);
-app.use('/', userRoutes);
+app.use(userRoutes);
 
 startSequelize(sequelize);
 
