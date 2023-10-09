@@ -4,7 +4,6 @@ import sequelize from "./config/sequelize.js";
 import userRoutes from "./routes/users.js";
 import { startSequelize } from "./utils/startSequelize.js";
 import bodyParser from "body-parser";
-import cors from "cors";
 
 dotenv.config();
 
@@ -13,7 +12,6 @@ const app = express();
 // Middleware untuk mengizinkan aplikasi menerima JSON
 app.use(express.json());    
 app.use(bodyParser.json());
-app.use(cors());
 
 // Gunakan rute pengguna
 app.use('/new', userRoutes);
