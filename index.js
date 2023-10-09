@@ -12,7 +12,6 @@ const app = express();
 // Middleware untuk mengizinkan aplikasi menerima JSON
 app.use(express.json());    
 app.use(bodyParser.json());
-app.use(cors());
 
 // Gunakan rute pengguna
 app.use('/new', userRoutes);
